@@ -1,0 +1,365 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #eeff00;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: #0a98f7;
+  }
+  
+  #theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  #theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Home Section */
+  #home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  #home .intro {
+    max-width: 50%;
+  }
+  
+  #home h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  #home .highlight {
+    color: #3498db;
+  }
+  
+  #home h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  #home p {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  
+  #home .profile-image img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* About Section */
+  #about {
+    background-color: #fff;
+    padding: 80px 0;
+    color: #333;
+  }
+  
+  #about h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  #about p {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Education Section */
+  #education {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+  }
+  
+  #education h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .education-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .education-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .education-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* Skills Section */
+  #skills {
+    padding: 80px 0;
+    background-color: #fff;
+  }
+  
+  #skills h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .skill {
+    margin-bottom: 30px;
+  }
+  
+  .skill h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .progress {
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  .c-programming {
+    width: 85%;
+    background-color: #3498db;
+  }
+  
+  .python {
+    width: 75%;
+    background-color: #f39c12;
+  }
+  
+  .java {
+    width: 70%;
+    background-color: #e74c3c;
+  }
+  
+  .skill p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  /* Contact Section */
+  #contact {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+    color: #333;
+  }
+  
+  #contact h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .developer-contact h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .developer-contact p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .developer-contact a {
+    color: #3498db;
+    font-weight: 500;
+  }
+  
+  .developer-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  header.dark-mode {
+    background-color: #1e1e1e;
+  }
+  
+  nav ul li a.dark-mode {
+    color: #fff;
+  }
+  
+  #theme-toggle.dark-mode {
+    color: #fff;
+  }
+  
+  #home.dark-mode {
+    background-color: #1e1e1e;
+  }
+  
+  #about.dark-mode,
+  #education.dark-mode,
+  #skills.dark-mode,
+  #contact.dark-mode {
+    background-color: #2a2a2a;
+  }
+  
+  .skill .progress-bar {
+    background-color: #444;
+  }
+  
+  .progress.c-programming {
+    background-color: #3498db;
+  }
+  
+  .progress.python {
+    background-color: #f39c12;
+  }
+  
+  .progress.java {
+    background-color: #e74c3c;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    #home {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    #home .profile-image img {
+      width: 250px;
+      margin-top: 20px;
+    }
+  
+    header .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    .education-item,
+    .skill {
+      padding: 20px;
+    }
+  }
+  
