@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANAND - Portfolio</title>
+  <title>Anand | Data Analyst Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+  <!-- HEADER -->
   <header>
     <div class="container">
       <div class="logo">ANAND</div>
@@ -16,95 +18,159 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
     </div>
   </header>
 
+  <!-- HERO SECTION -->
   <section id="home">
+  <div class="hero-container">
+    
     <div class="intro">
-      <h2>Game Developer</h2>
-      <h1>Hi, I'm <span class="highlight">ANAND</span></h1>
-      <p>From INDIA</p>
+      <h2>Aspiring Data Analyst</h2>
+      <h1>Hi, I'm <span class="highlight">Anand</span></h1>
+      <p>I turn data into actionable business insights using Tableau, Power BI & Python</p>
+      <a href="#projects" class="btn">View My Work</a>
     </div>
-    <div class="profile-image">
-      <img src="anand.jpeg" alt="Anand's photo">
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="fade-in">
+    <div class="profile-image">
+      <img src="anand.jpeg" alt="Anand Photo">
+    </div>
+
+  </div>
+</section>
+
+  <!-- ABOUT -->
+  <section id="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>Hi, I'm <span class="highlight">ANAND</span>, an aspiring Game Developer from India. Currently, I'm gaining hands-on experience as a game development intern, where I'm learning and growing in various areas of game creation.</p>
-      <p>During my internship, I’ve worked with game engines like <strong>Unity</strong> and <strong>Unreal Engine</strong>, learning how to build engaging game mechanics, design immersive game worlds, and implement artificial intelligence for realistic gameplay.</p>
-      <p>Feel free to get in touch if you're interested in discussing game development or have any questions!</p>
+      <p>
+        I am a Computer Science student passionate about solving real-world problems using data.
+        I have completed industry-level job simulations from Deloitte Australia and Tata,
+        where I worked on data analysis, dashboard creation, and business decision-making.
+      </p>
+      <p>
+        I specialize in data visualization, data cleaning, and extracting insights that help organizations
+        make smarter decisions.
+      </p>
     </div>
   </section>
 
-  <!-- Education Section -->
-  <section id="education" class="fade-in">
+  <!-- PROJECTS -->
+  <section id="projects">
     <div class="container">
-      <h2>Education</h2>
-      <div class="education-item">
-        <h3>Bachelor of Technology (B.Tech) - Computer Science</h3>
-        <p><strong>Veltech Multitech Dr.Rangarajan Dr.Sakunthala Engineering College</strong> | 2023 - Present</p>
-        <p>Currently pursuing my B.Tech with a focus on computer science and game programming</p>
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>AI Smart Agriculture System</h3>
+        <p><strong>Tools:</strong> Python, Machine Learning</p>
+        <p>
+          Developed an AI-based system that recommends suitable crops based on soil and environmental conditions.
+          Implemented predictive models to assist farmers in decision-making.
+        </p>
       </div>
-      <div class="education-item">
-        <h3>High School</h3>
-        <p><strong>Nazareth Matric Higher Secondary School</strong> | 2021 - 2023</p>
-        <p>Completed high school with a strong interest in mathematics, physics, and computer science.</p>
+
+      <div class="project">
+        <h3>Data Analytics Dashboard</h3>
+        <p><strong>Tools:</strong> Tableau, Power BI</p>
+        <p>
+          Built interactive dashboards to analyze business data, identify trends,
+          and provide insights for executive decision-making.
+        </p>
       </div>
+
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+        <p>
+          Designed and developed a personal portfolio website to showcase projects,
+          skills, and achievements.
+        </p>
+      </div>
+
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="fade-in">
+  <!-- EXPERIENCE / SIMULATIONS -->
+  <section id="experience">
+    <div class="container">
+      <h2>Experience & Simulations</h2>
+
+      <div class="exp">
+        <h3>Deloitte Australia – Data Analytics Job Simulation</h3>
+        <ul>
+          <li>Performed data analysis using Excel</li>
+          <li>Built dashboards using Tableau</li>
+          <li>Derived business insights from raw data</li>
+        </ul>
+      </div>
+
+      <div class="exp">
+        <h3>Tata – Data Visualisation Simulation</h3>
+        <ul>
+          <li>Created executive-level data visualizations</li>
+          <li>Prepared business questions for leadership meetings</li>
+          <li>Delivered insights for strategic decision-making</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
     <div class="container">
       <h2>Skills</h2>
-      <div class="skill">
-        <h3>C Programming</h3>
-        <div class="progress-bar"><div class="progress c-programming"></div></div>
-        <p>Strong understanding of C programming concepts, data structures, and algorithms.</p>
-      </div>
-      <div class="skill">
-        <h3>Python</h3>
-        <div class="progress-bar"><div class="progress python"></div></div>
-        <p>Experienced in Python for web development, automation, and data analysis.</p>
-      </div>
-      <div class="skill">
-        <h3>Java</h3>
-        <div class="progress-bar"><div class="progress java"></div></div>
-        <p>Proficient in Java for building scalable applications and software solutions.</p>
+
+      <div class="skill-list">
+        <p>Python</p>
+        <p>Java</p>
+        <p>Excel</p>
+        <p>Tableau</p>
+        <p>Power BI</p>
+        <p>Data Analysis</p>
+        <p>Machine Learning (Basics)</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="fade-in">
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+
+      <div>
+        <h3>B.Tech - Computer Science</h3>
+        <p>Veltech Multitech Engineering College (2023 - Present)</p>
+      </div>
+
+      <div>
+        <h3>Higher Secondary</h3>
+        <p>Nazareth Matric Higher Secondary School</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
-
-      <!-- Developer's Contact Info -->
-      <div class="developer-contact">
-        <h3>Developer's Contact Info</h3>
-        <p>Email: <a href="mailto:anand08052006@gmail.com">anand08052006@gmail.com</a></p>
-      </div>
-
+      <p>Email: <a href="mailto:anand08052006@gmail.com">anand08052006@gmail.com</a></p>
+      <p>GitHub: https://github.com/anandanbu</p>
+      <p>LinkedIn: https://www.linkedin.com/in/anand-a-9b7a4033b/</p>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2024 ANAND Portfolio. All Rights Reserved.</p>
+    <p>© 2026 Anand | Data Analyst Portfolio</p>
   </footer>
 
-  <script src="scripts.js"></script>
 </body>
-
 </html>
