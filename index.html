@@ -319,14 +319,24 @@
     <h2 class="section-title reveal-up">Let's work together</h2>
     <p class="contact-desc reveal-up">Whether you have a project in mind or just want to talk data — my inbox is open.</p>
     <div class="contact-links reveal-up">
-      <a href="mailto:anand08052006@gmail.com" class="contact-card">
+      <!-- Email row: Gmail button + Copy button -->
+      <div class="contact-card email-card">
         <div class="cc-icon">✉</div>
-        <div>
+        <div class="cc-text">
           <span class="cc-label">Email</span>
           <span class="cc-value">anand08052006@gmail.com</span>
         </div>
-        <svg class="cc-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+        <div class="email-actions">
+          <a href="https://mail.google.com/mail/?view=cm&to=anand08052006@gmail.com" target="_blank" class="email-btn gmail-btn" title="Open in Gmail">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            Gmail
+          </a>
+          <button class="email-btn copy-btn" id="copyEmailBtn" title="Copy email address">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            <span id="copyLabel">Copy</span>
+          </button>
+        </div>
+      </div>
       <a href="https://github.com/anandanbu" target="_blank" class="contact-card">
         <div class="cc-icon">⌥</div>
         <div>
