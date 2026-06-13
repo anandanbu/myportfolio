@@ -293,6 +293,60 @@ document.querySelectorAll('.line-reveal').forEach((el, i) => {
 })();
 
 
+/* ── CONTACT FORM (Formspree) ───────────────── */
+const contactForm  = document.getElementById('contactForm');
+const submitBtn    = document.getElementById('submitBtn');
+const submitText   = document.getElementById('submitText');
+const submitIcon   = document.getElementById('submitIcon');
+const formSuccess  = document.getElementById('formSuccess');
+const formError    = document.getElementById('formError');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    // Hide previous messages
+    formSuccess.classList.remove('show');
+    formError.classList.remove('show');
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.classList.add('sending');
+    submitText.textContent = 'Sending…';
+    submitIcon.innerHTML = `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.4" stroke-dashoffset="10" style="animation:spin 1s linear infinite;transform-origin:center"/>`;
+
+    try {
+      const data = new FormData(contactForm);
+      const res  = await fetch(contactForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        formSuccess.classList.add('show');
+        contactForm.reset();
+        submitText.textContent = 'Message Sent!';
+        submitIcon.innerHTML = `<path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('sending');
+          submitText.textContent = 'Send Message';
+          submitIcon.innerHTML = `<path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/>`;
+        }, 3000);
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      formError.classList.add('show');
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('sending');
+      submitText.textContent = 'Send Message';
+      submitIcon.innerHTML = `<path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/>`;
+    }
+  });
+}
+
 /* ── COPY EMAIL ─────────────────────────────── */
 const copyBtn   = document.getElementById('copyEmailBtn');
 const copyLabel = document.getElementById('copyLabel');
