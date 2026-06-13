@@ -309,17 +309,29 @@ if (copyBtn) {
   });
 }
 
-/* ── PROJECT CARD TILT ──────────────────────── */
+/* ── PROJECT CARD — CLICK + TILT ────────────── */
 document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect  = card.getBoundingClientRect();
-    const x     = (e.clientX - rect.left) / rect.width  - 0.5;
-    const y     = (e.clientY - rect.top)  / rect.height - 0.5;
-    card.style.transform = `translateY(-6px) rotateX(${-y * 7}deg) rotateY(${x * 7}deg)`;
-    card.style.transition = 'transform 0.1s ease';
+  const url = card.getAttribute('data-href');
+
+  // Whole-card click → open project in new tab
+  card.addEventListener('click', e => {
+    // Don't double-fire if the icon-link inside was clicked
+    if (e.target.closest('.icon-link')) return;
+    if (url) window.open(url, '_blank', 'noopener');
   });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-    card.style.transition = 'all 0.35s cubic-bezier(0.4,0,0.2,1)';
-  });
+
+  // 3D tilt — only on non-touch devices
+  if (window.matchMedia('(pointer: fine)').matches) {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width  - 0.5;
+      const y = (e.clientY - rect.top)  / rect.height - 0.5;
+      card.style.transform = `translateY(-6px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
+      card.style.transition = 'transform 0.08s ease';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.style.transition = 'all 0.4s cubic-bezier(0.4,0,0.2,1)';
+    });
+  }
 });
