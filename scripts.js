@@ -59,15 +59,37 @@ window.addEventListener('scroll', () => {
 
 
 /* ── SMOOTH SCROLL ──────────────────────────── */
+function scrollToEl(selector) {
+  const target = document.querySelector(selector);
+  if (!target) return;
+  const offset = document.getElementById('header').offsetHeight || 70;
+  const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+  window.scrollTo({ top, behavior: 'smooth' });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector(href);
     if (!target) return;
     e.preventDefault();
-    const offset = document.querySelector('#header').offsetHeight;
-    window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    scrollToEl(href);
   });
 });
+
+/* ── GET IN TOUCH — scroll to contact form ───── */
+const getInTouchBtn = document.getElementById('getInTouchBtn');
+if (getInTouchBtn) {
+  getInTouchBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    scrollToEl('#contact');
+    setTimeout(() => {
+      const firstField = document.getElementById('fname');
+      if (firstField) firstField.focus();
+    }, 700);
+  });
+}
 
 
 /* ── ACTIVE NAV ─────────────────────────────── */
