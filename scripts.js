@@ -293,6 +293,22 @@ document.querySelectorAll('.line-reveal').forEach((el, i) => {
 })();
 
 
+/* ── COPY EMAIL ─────────────────────────────── */
+const copyBtn   = document.getElementById('copyEmailBtn');
+const copyLabel = document.getElementById('copyLabel');
+if (copyBtn) {
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText('anand08052006@gmail.com').then(() => {
+      copyBtn.classList.add('copied');
+      copyLabel.textContent = 'Copied!';
+      setTimeout(() => {
+        copyBtn.classList.remove('copied');
+        copyLabel.textContent = 'Copy';
+      }, 2000);
+    });
+  });
+}
+
 /* ── PROJECT CARD TILT ──────────────────────── */
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('mousemove', e => {
