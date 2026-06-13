@@ -7,7 +7,7 @@ This website showcases my projects, skills, and experience in Data Analytics and
 
 ## 🌐 Live Website
 🔗 Visit my portfolio here:  
-https://anandanbu.github.io/myportfolio/
+myportfolio-liard-pi.vercel.app
 
 ---
 
