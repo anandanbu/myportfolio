@@ -608,6 +608,9 @@ section {
   animation-delay: var(--delay, 0s);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 .project-card::before {
   content: '';
