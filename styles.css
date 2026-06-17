@@ -357,6 +357,58 @@ h1 {
   flex-wrap: wrap;
 }
 
+/* RESUME LINKS */
+.resume-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  transition: var(--transition);
+}
+.resume-link:hover {
+  color: var(--indigo-l);
+  gap: 10px;
+}
+.resume-divider {
+  width: 1px;
+  height: 14px;
+  background: var(--border2);
+}
+
+/* RESUME LINKS */
+.resume-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  transition: var(--transition);
+}
+.resume-link:hover {
+  color: var(--indigo-l);
+  gap: 10px;
+}
+.resume-divider {
+  width: 1px;
+  height: 14px;
+  background: var(--border2);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1154,6 +1206,8 @@ footer {
     gap: 40px;
   }
   .hero-cta { justify-content: center; }
+  .resume-cta { justify-content: center; }
+  .resume-cta { justify-content: center; }
 
   .profile-frame { width: 210px; height: 210px; }
   .badge-1, .badge-2 { display: none; }
